@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "title": "furence",
+      "id": 1,
+
+      "category": "web design & development",
+      "background": "",
+      "date": "August 2018",
+      "description": "Furence is a Korean company that I worked before. It has been renewed and the website is made with Codeignitor framework.",
+      "url": "http://www.furence.com/",
+      "pc": [],
+      "mobile": []
+    },
+    {
+      "title": "perry & sherry",
+      "id": 2,
+
+      "category": "web design & development",
+      "background": "",
+      "date": "August 2019",
+      "description": "Wedding RSVP website made with React.js",
+      "url": "https://perrysherry.netlify.com/",
+      "pc": [],
+      "mobile": []
+    },
+    {
+      "title": "ITSM",
+      "id": 3,
+
+      "category": "Application design & development ",
+      "background": "",
+      "date": "December 2018",
+      "description": "Dashboard Application",
+      "url": "https://vancityjun.github.io/itsm/",
+      "pc": [],
+      "mobile": []
+    },
+    {
+      "title": "Sakura Park",
+      "id": 4,
+
+      "category": "3D Character design WebGL",
+      "background": "",
+      "date": "August 2019",
+      "description": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
+      "url": "https://vancityjun.github.io/sakura-town/",
+      "pc": [],
+      "mobile": []
+    }
+  ]
+}
