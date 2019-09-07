@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 
 function Slide(props) {
+  const background = {
+    background: "url(" + require("../img/" + props.background) + ")"
+  };
   return (
     <div
       className={"blog-slider__item swiper-slide project" + props.id}
       data-hash={"slide" + props.id}
     >
       <div className="blog-slider__img">
-        <section className="project-header" data-midnight="default">
+        <section
+          className="project-header"
+          data-midnight="default"
+          style={background}
+        >
           <div className="info-background"></div>
           <div className="project-info">
             <h2 className="project-info_title">{props.title}</h2>

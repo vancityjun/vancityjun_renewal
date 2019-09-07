@@ -1,17 +1,25 @@
 import React, { Component } from "react";
 import "./App.scss";
-import { TweenMax, TweenLite } from "gsap/TweenMax";
+// import { TweenMax, TweenLite } from "gsap/TweenMax";
 import $ from "jquery";
-// import Swiper from "swiper";
-import Swiper from "swiper/dist/js/swiper.esm.bundle";
+import Swiper from "swiper";
+// import Swiper from "swiper/dist/js/swiper.esm.bundle";
 import "swiper/dist/css/swiper.min.css";
-import { extname } from "path";
+// import { extname } from "path";
 import Topbar from "./component/Topbar.js";
 import Menu from "./component/Menu.js";
+import Profile from "./component/Profile.js";
 import Slide from "./component/Slide.js";
-import data, { projects } from "./data.json";
+import { projects } from "./data.json";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.slidehandler = this.slidehandler.bind(this);
+    this.state = {
+      swiper: ""
+    };
+  }
   componentDidMount() {
     const swiper = new Swiper(".blog-slider", {
       spaceBetween: 30,
@@ -38,7 +46,7 @@ class App extends Component {
       },
       direction: "vertical"
     });
-
+    this.setState({ swiper });
     $(".toggle-menu").click(function() {
       $(this).toggleClass("active");
       $(".menu").fadeToggle(600);
@@ -160,7 +168,12 @@ class App extends Component {
         );
       });
     });
-
+    //menu onclick
+    $(".link").on("click", function(e) {
+      e.preventDefault();
+      var i = $(".link").index($(this)) + 1;
+      swiper.slideTo(i);
+    });
     var backgrounds = [
       "jun",
       "furence",
@@ -176,7 +189,7 @@ class App extends Component {
       );
       $(".preview").css(
         "background-image",
-        "url('img/" + backgrounds[i] + ".png')"
+        "url('./img/" + backgrounds[i] + ".png')"
       );
       $(".menuWrapper ul li:eq(" + i + ")")
         .find(".link")
@@ -246,12 +259,15 @@ class App extends Component {
       menuActive();
     });
   }
+  slidehandler(i) {
+    this.swiper.slideTo(i);
+  }
   render() {
-    const slides = projects.map(projects => {
+    const slides = projects.map((projects, i) => {
       return (
         <Slide
-          key={projects.id}
-          id={projects.id}
+          key={i}
+          id={i}
           title={projects.title}
           category={projects.category}
           background={projects.background}
@@ -267,9 +283,12 @@ class App extends Component {
       <div className="App">
         <div className="wrapper">
           <Topbar />
-          <Menu />
+          <Menu projects={projects} />
           <div className="blog-slider">
-            <div className="blog-slider__wrp swiper-wrapper">{slides}</div>
+            <div className="blog-slider__wrp swiper-wrapper">
+              <Profile />
+              {slides}
+            </div>
             <div className="arrows">
               <div className="navigation blog-button-prev">prev</div>
               <span className="space"></span>

@@ -116,6 +116,7 @@ body {
     .link {
       position: relative;
       transition: 0.3s;
+      text-transform: capitalize;
       &:after {
         content: "";
         position: absolute;
@@ -327,25 +328,6 @@ $hamburger-zindex: $menu-zindex + 10;
   transition: all 0.3s;
   .profile .project-header {
     background: url("./img/jun.png") no-repeat;
-  }
-
-  .project1 .project-header {
-    background: url("./img/furence.png") no-repeat;
-  }
-  .project2 .project-header {
-    background: url("./img/perrysherry.png") no-repeat;
-  }
-  .project3 .project-header {
-    background: url("./img/itsm.png") no-repeat;
-  }
-  .project4 .project-header {
-    background: url("./img/shiba.png") no-repeat;
-  }
-  .project5 .project-header {
-    background: url("./img/recsee-video.png") no-repeat;
-  }
-  .project6 .project-header {
-    background: url("./img/award.png") no-repeat;
   }
 
   .blog-slider__img .project-header {
