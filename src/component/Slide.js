@@ -1,9 +1,32 @@
 import React, { Component } from "react";
+import ReactHtmlParser from "react-html-parser";
 
 function Slide(props) {
   const background = {
     background: "url(" + require("../img/" + props.background) + ")"
   };
+  const pc = props.pc.map(pc => {
+    return <img src={require("../img/" + pc)} alt=""></img>;
+  });
+  const mobile = props.mobile.map(mobile => {
+    return <img src={require("../img/" + mobile)} alt=""></img>;
+  });
+  // let content;
+  // if (props.mobile.length !== 0 && props.pc.length !== 0) {
+  //   content = (
+  //     <div className="device">
+  //       <a href="#" className="btnDesktop active">
+  //         <i className="fas fa-desktop"></i>
+  //         <span>PC</span>
+  //       </a>
+  //       <a href="#" className="btnMobile">
+  //         <i className="fas fa-mobile-alt"></i>
+  //         <span>Mobile</span>
+  //       </a>
+  //     </div>
+  //   );
+  // }
+
   return (
     <div
       className={"blog-slider__item swiper-slide project" + props.id}
@@ -28,27 +51,31 @@ function Slide(props) {
           </a>
         </section>
         <div className="project-content cf" data-midnight="bright">
-          <div className="device">
-            <a href="#" className="btnDesktop active">
-              <i className="fas fa-desktop"></i>
-              <span>PC</span>
-            </a>
-            <a href="#" className="btnMobile">
-              <i className="fas fa-mobile-alt"></i>
-              <span>Mobile</span>
-            </a>
-          </div>
-          <div className="desktop conWrap">
-            {/* <img src="img/furence1600all.png" alt=""> */}
-          </div>
+          {ReactHtmlParser(props.customContent)}
+          {props.pc.length !== 0 ? (
+            <>
+              <div className="device">
+                <a href="#" className="btnDesktop active">
+                  <i className="fas fa-desktop"></i>
+                  <span>PC</span>
+                </a>
+                {props.mobile.length !== 0 ? (
+                  <a href="#" className="btnMobile">
+                    <i className="fas fa-mobile-alt"></i>
+                    <span>Mobile</span>
+                  </a>
+                ) : null}
+              </div>
+              <div className="desktop conWrap">{pc}</div>
+              <div className="mobile conWrap" style={{ display: "none" }}>
+                {mobile}
+              </div>
+            </>
+          ) : null}
+          {/* <div className="desktop conWrap">{pc}</div>
           <div className="mobile conWrap" style={{ display: "none" }}>
-            {/* <img src="img/furence-mobile-1.png" alt="">
-        <img src="img/furence-mobile-2.png" alt="">
-        <img src="img/furence-mobile-3.png" alt="">
-        <img src="img/furence-mobile-4.png" alt="">
-        <img src="img/furence-mobile-5.png" alt="">
-        <img src="img/furence-mobile-6.png" alt=""> */}
-          </div>
+            {mobile}
+          </div> */}
         </div>
       </div>
       <div className="content_wrapper works">

@@ -276,6 +276,7 @@ class App extends Component {
           url={projects.url}
           pc={projects.pc}
           mobile={projects.mobile}
+          customContent={projects.customContent}
         />
       );
     });

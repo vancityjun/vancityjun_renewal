@@ -7,8 +7,15 @@
       "date": "August 2018",
       "description": "Furence is a Korean company that I worked before. It has been renewed and the website is made with Codeignitor framework.",
       "url": "http://www.furence.com/",
-      "pc": [],
-      "mobile": []
+      "pc": ["furence1600all.png"],
+      "mobile": [
+        "furence-mobile-1.png",
+        "furence-mobile-2.png",
+        "furence-mobile-3.png",
+        "furence-mobile-4.png",
+        "furence-mobile-5.png",
+        "furence-mobile-6.png"
+      ]
     },
     {
       "title": "perry & sherry",
@@ -27,7 +34,15 @@
       "date": "December 2018",
       "description": "Dashboard Application",
       "url": "https://vancityjun.github.io/itsm/",
-      "pc": [],
+      "pc": [
+        "itsm-login.png",
+        "dashboard.png",
+        "itsm-calender.png",
+        "itsm-tickets.png",
+        "itsm-solution.png",
+        "itsm-report.png",
+        "itsm-setting.png"
+      ],
       "mobile": []
     },
     {
@@ -38,7 +53,8 @@
       "description": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
       "url": "https://vancityjun.github.io/sakura-town/",
       "pc": [],
-      "mobile": []
+      "mobile": [],
+      "customContent": "<video playsinline autoplay loop muted><source src=\"../img/shiba_yukata2.mp4\" type=\"video/mp4\"></video>"
     },
     {
       "title": "RecSee",
@@ -48,7 +64,8 @@
       "description": "Motion Graphic",
       "url": "",
       "pc": [],
-      "mobile": []
+      "mobile": [],
+      "customContent": "<div class=\"videoWrapper\" style=\"display:none;\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pGe_YpY2bG8?rel=0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>"
     },
     {
       "title": "Insmart",
