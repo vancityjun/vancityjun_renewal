@@ -97,6 +97,8 @@ body {
     font-size: 4rem;
     padding: 0 5%;
     color: $white-blue;
+    overflow: hidden;
+    display: block;
     .mobile {
       font-size: 18px;
       line-height: 1.2;
@@ -117,6 +119,7 @@ body {
       position: relative;
       transition: 0.3s;
       text-transform: capitalize;
+      line-height: 2;
       &:after {
         content: "";
         position: absolute;
@@ -147,6 +150,14 @@ body {
     }
     .menuWrapper {
       float: left;
+      .scrollWrap {
+        position: relative;
+        transition: transform 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 0, 0) scale(1);
+        will-change: transform;
+        // -webkit-overflow-scrolling: touch;
+        touch-action: none;
+      }
     }
     .imageWrapper {
       float: right;
@@ -579,9 +590,15 @@ $hamburger-zindex: $menu-zindex + 10;
       }
 
       &.scroll {
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
+        position: relative;
+        transition: transform 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 0, 0) scale(1);
+        will-change: transform;
+        // -webkit-overflow-scrolling: touch;
+        touch-action: none;
       }
 
       .blog-slider__content {

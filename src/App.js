@@ -46,7 +46,7 @@ class App extends Component {
       },
       direction: "vertical"
     });
-    this.setState({ swiper });
+
     $(".toggle-menu").click(function() {
       $(this).toggleClass("active");
       $(".menu").fadeToggle(600);
@@ -102,6 +102,7 @@ class App extends Component {
       $(".blog-slider__button").on("click", function(e) {
         e.preventDefault();
         contentOpen();
+        // customScroll(100);
       });
 
       $(".swiper-slide")
@@ -167,6 +168,38 @@ class App extends Component {
           "linear"
         );
       });
+      function customScroll(step) {
+        const scrollWrap = $(".swiper-slide-active");
+        const scrollWrapHeight =
+          $(".swiper-slide-active .blog-slider__img").height() -
+          window.innerHeight;
+        let scrolled = 0;
+        console.log(scrollWrap.height());
+
+        const isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
+        let scrollSpeed = isMac ? step / 10 : step;
+        // $(".menu").scroll(function(event) {
+        window.addEventListener("wheel", event => {
+          event.preventDefault();
+          if (event.deltaY > 0) {
+            scrolled =
+              scrolled < scrollWrapHeight
+                ? parseInt((scrolled += scrollSpeed))
+                : scrollWrapHeight;
+            console.log(scrolled);
+            scrollWrap.css({
+              transform: "translate3d(0, -" + scrolled + "px, 0) scale(1)"
+            });
+          } else {
+            scrolled = scrolled > 0 ? (scrolled -= scrollSpeed) : 0;
+            scrollWrap.css({
+              transform: "translate3d(0, -" + scrolled + "px, 0) scale(1)"
+            });
+          }
+        });
+      }
+
+      // customScroll(100);
     });
     //menu onclick
     $(".link").on("click", function(e) {
@@ -189,7 +222,7 @@ class App extends Component {
       );
       $(".preview").css(
         "background-image",
-        "url('./img/" + backgrounds[i] + ".png')"
+        "url(" + require("./img/" + backgrounds[i] + ".png") + ")"
       );
       $(".menuWrapper ul li:eq(" + i + ")")
         .find(".link")
@@ -259,6 +292,7 @@ class App extends Component {
       menuActive();
     });
   }
+
   slidehandler(i) {
     this.swiper.slideTo(i);
   }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ReactHtmlParser from "react-html-parser";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDesktop, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 
 function Slide(props) {
   const background = {
@@ -26,7 +28,7 @@ function Slide(props) {
   //     </div>
   //   );
   // }
-
+  const size = "3x";
   return (
     <div
       className={"blog-slider__item swiper-slide project" + props.id}
@@ -57,11 +59,21 @@ function Slide(props) {
               <div className="device">
                 <a href="#" className="btnDesktop active">
                   <i className="fas fa-desktop"></i>
+                  <FontAwesomeIcon
+                    icon={faDesktop}
+                    size={size}
+                    style={{ margin: "0 auto" }}
+                  />
                   <span>PC</span>
                 </a>
                 {props.mobile.length !== 0 ? (
                   <a href="#" className="btnMobile">
                     <i className="fas fa-mobile-alt"></i>
+                    <FontAwesomeIcon
+                      icon={faMobileAlt}
+                      size={size}
+                      style={{ margin: "0 auto" }}
+                    />
                     <span>Mobile</span>
                   </a>
                 ) : null}

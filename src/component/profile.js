@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { fab, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 class Profile extends Component {
   render() {
@@ -31,15 +32,18 @@ class Profile extends Component {
                 <a href="mailto:vancityjun@gmail.com">vancityjun@gmail.com</a>
               </p>
               <div className="sns">
-                <a href="https://github.com/vancityjun" target="_blank">
-                  <i className="fab fa-github"></i>
-                  <FontAwesomeIcon icon={["fab", "faGithub"]} />
+                <a
+                  href="https://github.com/vancityjun"
+                  target="_blank"
+                  style={{ marginRight: 10 }}
+                >
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/vancityjun"
                   target="_blank"
                 >
-                  <i className="fab fa-linkedin"></i>
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </a>
                 {/* <a href="https://www.facebook.com/vancityjun"><i className="fab fa-facebook-square"></i></a> */}
                 {/*  <a href="https://www.instagram.com/vancityjun"><i className="fab fa-instagram"></i></a> */}
