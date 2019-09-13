@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactHtmlParser from "react-html-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
+import ScrollTop from "../component/ScrollTop";
 
 function Slide(props) {
   const background = {
@@ -82,6 +83,7 @@ function Slide(props) {
               <div className="mobile conWrap" style={{ display: "none" }}>
                 {mobile}
               </div>
+              <ScrollTop />
             </>
           ) : null}
           {/* <div className="desktop conWrap">{pc}</div>

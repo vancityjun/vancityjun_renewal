@@ -45,7 +45,7 @@ li {
 }
 
 body {
-  height: 100vh;
+  // height: 100vh;
   // font-family: 'Tajawal', sans-serif;
   font-family: "Tajawal", sans-serif;
   font-weight: 300;
@@ -590,15 +590,10 @@ $hamburger-zindex: $menu-zindex + 10;
       }
 
       &.scroll {
-        overflow-y: auto;
+        overflow: hidden;
+        // overflow-y: auto;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
-        position: relative;
-        transition: transform 2s cubic-bezier(0.215, 0.61, 0.355, 1);
-        transform: translate3d(0, 0, 0) scale(1);
-        will-change: transform;
-        // -webkit-overflow-scrolling: touch;
-        touch-action: none;
       }
 
       .blog-slider__content {
@@ -623,6 +618,12 @@ $hamburger-zindex: $menu-zindex + 10;
     position: absolute;
     right: 300px;
     transition: all 0.5s;
+
+    // transition: transform 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0) scale(1);
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+    touch-action: none;
 
     @media screen and (max-width: 567px) {
       right: 0 !important;

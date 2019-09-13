@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
-// import { TweenMax, TweenLite } from "gsap/TweenMax";
+import { TweenMax, ScrollToPlugin, TweenLite, Power1 } from "gsap/all";
 import $ from "jquery";
 import Swiper from "swiper";
 // import Swiper from "swiper/dist/js/swiper.esm.bundle";
@@ -102,7 +102,6 @@ class App extends Component {
       $(".blog-slider__button").on("click", function(e) {
         e.preventDefault();
         contentOpen();
-        // customScroll(100);
       });
 
       $(".swiper-slide")
@@ -116,6 +115,9 @@ class App extends Component {
           },
           400
         );
+        $(".blog-slider__img").css({
+          transform: "translate3d(0, 0, 0) scale(1)"
+        });
         $(".swiper-slide").removeClass("scroll");
         $(".swiper-slide")
           .find(".content_wrapper")
@@ -157,49 +159,58 @@ class App extends Component {
         $(".menu").fadeOut(600);
         contentClose(400);
       });
-
-      $(".scrollDown").on("click", function(e) {
+      $(".scrollTop").on("click", function(e) {
         e.preventDefault();
         $(".scroll").animate(
           {
-            scrollTop: $(".project-content").offset().top
+            scrollTop: 0
           },
-          500,
-          "linear"
+          400
         );
       });
-      function customScroll(step) {
-        const scrollWrap = $(".swiper-slide-active");
-        const scrollWrapHeight =
-          $(".swiper-slide-active .blog-slider__img").height() -
-          window.innerHeight;
-        let scrolled = 0;
-        console.log(scrollWrap.height());
+      // $(".scrollDown").on("click", function(e) {
+      //   e.preventDefault();
+      //   $(".scroll").animate(
+      //     {
+      //       scrollTop: $(".project-header").height()
+      //     },
+      //     500,
+      //     "linear"
+      //   );
+      // });
 
-        const isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
-        let scrollSpeed = isMac ? step / 10 : step;
-        // $(".menu").scroll(function(event) {
-        window.addEventListener("wheel", event => {
-          event.preventDefault();
-          if (event.deltaY > 0) {
-            scrolled =
-              scrolled < scrollWrapHeight
-                ? parseInt((scrolled += scrollSpeed))
-                : scrollWrapHeight;
-            console.log(scrolled);
-            scrollWrap.css({
-              transform: "translate3d(0, -" + scrolled + "px, 0) scale(1)"
-            });
-          } else {
-            scrolled = scrolled > 0 ? (scrolled -= scrollSpeed) : 0;
-            scrollWrap.css({
-              transform: "translate3d(0, -" + scrolled + "px, 0) scale(1)"
-            });
-          }
-        });
+      let wrap = $(".blog-slider__img");
+      wrap.on("mousewheel", function() {
+        customScroll();
+      });
+      if (window.addEventListener) {
+        window.addEventListener("DOMMouseScroll", customScroll, false);
       }
-
-      // customScroll(100);
+      function customScroll(event) {
+        var delta = 0;
+        if (!event) {
+          event = window.event;
+        }
+        if (event.wheelDelta) {
+          delta = event.wheelDelta / 120;
+        } else if (event.detail) {
+          delta = -event.detail / 3;
+        }
+        if (delta) {
+          var scrollTop = $(".scroll").scrollTop();
+          var finScroll = scrollTop - parseInt(delta * 100) * 3;
+          console.log(scrollTop);
+          TweenMax.to($(".scroll"), 1, {
+            scrollTo: { y: finScroll },
+            ease: Power1.easeOut,
+            overwrite: 5
+          });
+        }
+        if (event.preventDefault) {
+          event.preventDefault();
+        }
+        event.returnValue = false;
+      }
     });
     //menu onclick
     $(".link").on("click", function(e) {
