@@ -11,6 +11,7 @@ import Menu from "./component/Menu.js";
 import Profile from "./component/Profile.js";
 import Slide from "./component/Slide.js";
 import { projects } from "./data.json";
+import Cursor from "./component/Cursor.js";
 
 class App extends Component {
   constructor(props) {
@@ -343,6 +344,7 @@ class App extends Component {
             <div className="blog-slider__pagination"></div>
           </div>
         </div>
+        <Cursor />
       </div>
     );
   }
