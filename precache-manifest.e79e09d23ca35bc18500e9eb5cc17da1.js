@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "803b050d89f28db5195a1f2b2fb99d7d",
+    "revision": "3e1f718e10bde49b9b97ae5a54babfc2",
     "url": "/vancityjun_renewal/index.html"
   },
   {
-    "revision": "2e00229f0ad32576cc2e",
+    "revision": "903a30588a4aa93befc4",
     "url": "/vancityjun_renewal/static/css/2.acb72abc.chunk.css"
   },
   {
-    "revision": "a3a5c5cf72d01c6e59e4",
+    "revision": "e21ec8da60324d79c3c7",
     "url": "/vancityjun_renewal/static/css/main.3d924da2.chunk.css"
   },
   {
-    "revision": "2e00229f0ad32576cc2e",
-    "url": "/vancityjun_renewal/static/js/2.57eb2f69.chunk.js"
+    "revision": "903a30588a4aa93befc4",
+    "url": "/vancityjun_renewal/static/js/2.3a59b0fd.chunk.js"
   },
   {
-    "revision": "a3a5c5cf72d01c6e59e4",
-    "url": "/vancityjun_renewal/static/js/main.e5fd4aa7.chunk.js"
+    "revision": "e21ec8da60324d79c3c7",
+    "url": "/vancityjun_renewal/static/js/main.87201aba.chunk.js"
   },
   {
     "revision": "8aecff834c4b2843cc02",
