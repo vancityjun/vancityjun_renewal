@@ -6,7 +6,9 @@ import ScrollTop from "../component/ScrollTop";
 
 function Slide(props) {
   const background = {
-    background: "url(" + require("../img/" + props.background) + ")"
+    background: "url(" + require("../img/" + props.background) + ")",
+    backgroundSize: "cover",
+    backgroundPosition: "50%"
   };
   const pc = props.pc.map(pc => {
     return <img src={require("../img/" + pc)} alt=""></img>;

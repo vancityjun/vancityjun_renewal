@@ -370,7 +370,8 @@ $hamburger-zindex: $menu-zindex + 10;
       }
 
       &_title {
-        font-size: 150px;
+        font-size: 10vw;
+        line-height: 1;
         text-transform: capitalize;
         @media screen and(max-width: 576px) {
           font-size: 76px;
@@ -385,6 +386,7 @@ $hamburger-zindex: $menu-zindex + 10;
       }
 
       .view-website {
+        height: 42px;
         font-size: 22px;
         display: inline-block;
         padding: 10px 20px;

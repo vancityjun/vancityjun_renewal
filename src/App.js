@@ -55,7 +55,7 @@ class App extends Component {
 
     $(function() {
       // $('.top_bar').midnight();
-      function contentOpen() {
+      const contentOpen = () => {
         $(".swiper-slide-active")
           .find(".content_wrapper")
           .css("right", "-45%");
@@ -98,7 +98,7 @@ class App extends Component {
           },
           0
         );
-      }
+      };
       /* VIEW CASE BUTTON */
       $(".blog-slider__button").on("click", function(e) {
         e.preventDefault();
@@ -109,7 +109,7 @@ class App extends Component {
         .find(".info-background")
         .css("display", "none");
 
-      function contentClose(fod) {
+      const contentClose = fod => {
         $(".scroll").animate(
           {
             scrollTop: 0
@@ -147,7 +147,7 @@ class App extends Component {
         $(".swiper-wrapper").removeClass("swiper-no-swiping");
         swiper.mousewheel.enable();
         swiper.keyboard.enable();
-      }
+      };
       /* CLOSE BUTTON */
       $(".closeBtn").on("click", function(e) {
         e.preventDefault();
@@ -226,16 +226,21 @@ class App extends Component {
       "itsm",
       "shiba",
       "recsee-video",
+      "award",
+      "award",
       "award"
     ];
-    function menuActive() {
-      var i = $(".swiper-pagination-bullet").index(
-        $(".swiper-pagination-bullet-active")
-      );
+    const changeBackground = i => {
       $(".preview").css(
         "background-image",
         "url(" + require("./img/" + backgrounds[i] + ".png") + ")"
       );
+    };
+    const menuActive = () => {
+      var i = $(".swiper-pagination-bullet").index(
+        $(".swiper-pagination-bullet-active")
+      );
+      changeBackground(i);
       $(".menuWrapper ul li:eq(" + i + ")")
         .find(".link")
         .addClass("active");
@@ -243,24 +248,18 @@ class App extends Component {
         .siblings()
         .find(".link")
         .removeClass("active");
-    }
+    };
 
     $(".menuWrapper ul li").mouseenter(function() {
       var i = $(".menuWrapper ul li").index(this);
-      $(".preview").css(
-        "background-image",
-        "url('img/" + backgrounds[i] + ".png')"
-      );
+      changeBackground(i);
     });
 
     $(".menuWrapper ul li").mouseleave(function() {
       var i = $(".swiper-pagination-bullet").index(
         $(".swiper-pagination-bullet-active")
       );
-      $(".preview").css(
-        "background-image",
-        "url('img/" + backgrounds[i] + ".png')"
-      );
+      changeBackground(i);
     });
 
     swiper.on("slideChange", function() {

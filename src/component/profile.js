@@ -19,15 +19,13 @@ class Profile extends Component {
             <div className="blog-slider__title">Jun Lee</div>
             <div className="blog-slider__text">
               <q>
-                I'm a front-end developer from Korea living in Vancouver.
+                I'm a front-end developer in Vancouver.
                 <br></br> I'd like to learn and discover new things every day to
                 improve myself and am very adaptable.
               </q>
             </div>
             <div className="info">
-              <p>
-                <a href="tel:6043795391">(604) 379 5391</a>
-              </p>
+              <p>{/* <a href="tel:6043795391">(604) 379 5391</a> */}</p>
               <p>
                 <a href="mailto:vancityjun@gmail.com">vancityjun@gmail.com</a>
               </p>
