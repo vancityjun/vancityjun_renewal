@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/vancityjun_renewal/static/css/main.3d924da2.chunk.css",
-    "main.js": "/vancityjun_renewal/static/js/main.87201aba.chunk.js",
-    "main.js.map": "/vancityjun_renewal/static/js/main.87201aba.chunk.js.map",
-    "runtime~main.js": "/vancityjun_renewal/static/js/runtime~main.f8f4a0a1.js",
-    "runtime~main.js.map": "/vancityjun_renewal/static/js/runtime~main.f8f4a0a1.js.map",
+    "main.css": "/vancityjun_renewal/static/css/main.75f1daf9.chunk.css",
+    "main.js": "/vancityjun_renewal/static/js/main.268431b4.chunk.js",
+    "main.js.map": "/vancityjun_renewal/static/js/main.268431b4.chunk.js.map",
+    "runtime-main.js": "/vancityjun_renewal/static/js/runtime-main.a81745d0.js",
+    "runtime-main.js.map": "/vancityjun_renewal/static/js/runtime-main.a81745d0.js.map",
     "static/css/2.acb72abc.chunk.css": "/vancityjun_renewal/static/css/2.acb72abc.chunk.css",
-    "static/js/2.3a59b0fd.chunk.js": "/vancityjun_renewal/static/js/2.3a59b0fd.chunk.js",
-    "static/js/2.3a59b0fd.chunk.js.map": "/vancityjun_renewal/static/js/2.3a59b0fd.chunk.js.map",
+    "static/js/2.7774f1f1.chunk.js": "/vancityjun_renewal/static/js/2.7774f1f1.chunk.js",
+    "static/js/2.7774f1f1.chunk.js.map": "/vancityjun_renewal/static/js/2.7774f1f1.chunk.js.map",
     "index.html": "/vancityjun_renewal/index.html",
-    "precache-manifest.e79e09d23ca35bc18500e9eb5cc17da1.js": "/vancityjun_renewal/precache-manifest.e79e09d23ca35bc18500e9eb5cc17da1.js",
+    "precache-manifest.e3f7bbbd37cbd1175ac851f5aba1f2ba.js": "/vancityjun_renewal/precache-manifest.e3f7bbbd37cbd1175ac851f5aba1f2ba.js",
     "service-worker.js": "/vancityjun_renewal/service-worker.js",
     "static/css/2.acb72abc.chunk.css.map": "/vancityjun_renewal/static/css/2.acb72abc.chunk.css.map",
-    "static/css/main.3d924da2.chunk.css.map": "/vancityjun_renewal/static/css/main.3d924da2.chunk.css.map",
+    "static/css/main.75f1daf9.chunk.css.map": "/vancityjun_renewal/static/css/main.75f1daf9.chunk.css.map",
+    "static/js/2.7774f1f1.chunk.js.LICENSE": "/vancityjun_renewal/static/js/2.7774f1f1.chunk.js.LICENSE",
     "static/media/award.png": "/vancityjun_renewal/static/media/award.0b279869.png",
     "static/media/dashboard.png": "/vancityjun_renewal/static/media/dashboard.3ae82bc7.png",
     "static/media/febreze.jpg": "/vancityjun_renewal/static/media/febreze.5ef70a52.jpg",
@@ -36,7 +37,7 @@
     "static/media/itsm-solution.png": "/vancityjun_renewal/static/media/itsm-solution.16c96b3e.png",
     "static/media/itsm-tickets.png": "/vancityjun_renewal/static/media/itsm-tickets.99056fe4.png",
     "static/media/itsm.png": "/vancityjun_renewal/static/media/itsm.06293fde.png",
-    "static/media/index.scss": "/vancityjun_renewal/static/media/jun.20bd2846.png",
+    "static/media/jun.png": "/vancityjun_renewal/static/media/jun.20bd2846.png",
     "static/media/jun02.png": "/vancityjun_renewal/static/media/jun02.668e8bcc.png",
     "static/media/natural.jpg": "/vancityjun_renewal/static/media/natural.3a4fe4b5.jpg",
     "static/media/og-image.png": "/vancityjun_renewal/static/media/og-image.5623d591.png",
@@ -50,5 +51,12 @@
     "static/media/shiba_yukata.mp4": "/vancityjun_renewal/static/media/shiba_yukata.16d359f3.mp4",
     "static/media/shiba_yukata2.mp4": "/vancityjun_renewal/static/media/shiba_yukata2.45b39558.mp4",
     "static/media/wwf.jpg": "/vancityjun_renewal/static/media/wwf.6836141f.jpg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a81745d0.js",
+    "static/css/2.acb72abc.chunk.css",
+    "static/js/2.7774f1f1.chunk.js",
+    "static/css/main.75f1daf9.chunk.css",
+    "static/js/main.268431b4.chunk.js"
+  ]
 }

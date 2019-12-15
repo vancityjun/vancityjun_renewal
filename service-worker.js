@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vancityjun_renewal/precache-manifest.e79e09d23ca35bc18500e9eb5cc17da1.js"
+  "/vancityjun_renewal/precache-manifest.e3f7bbbd37cbd1175ac851f5aba1f2ba.js"
 );
 
 self.addEventListener('message', (event) => {

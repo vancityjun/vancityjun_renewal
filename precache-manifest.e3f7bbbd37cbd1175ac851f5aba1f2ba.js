@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3e1f718e10bde49b9b97ae5a54babfc2",
+    "revision": "37a32a88a4372a577f949d7f04abe930",
     "url": "/vancityjun_renewal/index.html"
   },
   {
-    "revision": "903a30588a4aa93befc4",
+    "revision": "ecf1d9d3e1d9a3afda67",
     "url": "/vancityjun_renewal/static/css/2.acb72abc.chunk.css"
   },
   {
-    "revision": "e21ec8da60324d79c3c7",
-    "url": "/vancityjun_renewal/static/css/main.3d924da2.chunk.css"
+    "revision": "dedeb5e68a1b24788c02",
+    "url": "/vancityjun_renewal/static/css/main.75f1daf9.chunk.css"
   },
   {
-    "revision": "903a30588a4aa93befc4",
-    "url": "/vancityjun_renewal/static/js/2.3a59b0fd.chunk.js"
+    "revision": "ecf1d9d3e1d9a3afda67",
+    "url": "/vancityjun_renewal/static/js/2.7774f1f1.chunk.js"
   },
   {
-    "revision": "e21ec8da60324d79c3c7",
-    "url": "/vancityjun_renewal/static/js/main.87201aba.chunk.js"
+    "revision": "8f7c0040368f38354ed233de277b5e8c",
+    "url": "/vancityjun_renewal/static/js/2.7774f1f1.chunk.js.LICENSE"
   },
   {
-    "revision": "8aecff834c4b2843cc02",
-    "url": "/vancityjun_renewal/static/js/runtime~main.f8f4a0a1.js"
+    "revision": "dedeb5e68a1b24788c02",
+    "url": "/vancityjun_renewal/static/js/main.268431b4.chunk.js"
+  },
+  {
+    "revision": "724a16b8bbfd93c55e2d",
+    "url": "/vancityjun_renewal/static/js/runtime-main.a81745d0.js"
   },
   {
     "revision": "0b279869565c6815dbd96483db65e4ab",
