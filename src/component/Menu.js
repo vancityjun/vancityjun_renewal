@@ -3,7 +3,7 @@ import $ from "jquery";
 function Menu(props) {
   const menuLists = props.projects.map((project, i) => {
     return (
-      <li>
+      <li key={i}>
         <a className="link" href="#">
           {project.title}
         </a>

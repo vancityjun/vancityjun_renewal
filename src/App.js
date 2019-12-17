@@ -22,6 +22,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
+    console.log("App loaded");
     const swiper = new Swiper(".blog-slider", {
       spaceBetween: 30,
       effect: "fade", //fade slide
@@ -200,7 +201,7 @@ class App extends Component {
         if (delta) {
           var scrollTop = $(".scroll").scrollTop();
           var finScroll = scrollTop - parseInt(delta * 100) * 3;
-          console.log(scrollTop);
+          // console.log(scrollTop);
           TweenMax.to($(".scroll"), 1, {
             scrollTo: { y: finScroll },
             ease: Power1.easeOut,

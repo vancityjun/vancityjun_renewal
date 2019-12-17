@@ -337,9 +337,6 @@ $hamburger-zindex: $menu-zindex + 10;
   // padding: 25px;
   height: 100%;
   transition: all 0.3s;
-  .profile .project-header {
-    background: url("./img/jun.png") no-repeat;
-  }
 
   .blog-slider__img .project-header {
     background-size: cover;
@@ -386,7 +383,7 @@ $hamburger-zindex: $menu-zindex + 10;
       }
 
       .view-website {
-        height: 42px;
+        // height: 42px;
         font-size: 22px;
         display: inline-block;
         padding: 10px 20px;

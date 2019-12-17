@@ -10,11 +10,11 @@ function Slide(props) {
     backgroundSize: "cover",
     backgroundPosition: "50%"
   };
-  const pc = props.pc.map(pc => {
-    return <img src={require("../img/" + pc)} alt=""></img>;
+  const pc = props.pc.map((pc, i) => {
+    return <img src={require("../img/" + pc)} alt="" key={i}></img>;
   });
-  const mobile = props.mobile.map(mobile => {
-    return <img src={require("../img/" + mobile)} alt=""></img>;
+  const mobile = props.mobile.map((mobile, i) => {
+    return <img src={require("../img/" + mobile)} alt="" key={i}></img>;
   });
   // let content;
   // if (props.mobile.length !== 0 && props.pc.length !== 0) {
@@ -47,9 +47,11 @@ function Slide(props) {
           <div className="project-info">
             <h2 className="project-info_title">{props.title}</h2>
             <p className="project-info_detail">{props.description}</p>
-            <a href={props.url} target="_blank" className="view-website">
-              View website
-            </a>
+            {props.url ? (
+              <a href={props.url} target="_blank" className="view-website">
+                View website
+              </a>
+            ) : null}
           </div>
           <a href="#" className="scrollDown" style={{ display: "none" }}>
             <span></span>

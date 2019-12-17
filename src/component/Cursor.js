@@ -23,10 +23,6 @@ class Cursor extends Component {
         // Custom Cursor
         cursor.style.left = e.clientX + "px";
         cursor.style.top = e.clientY + "px";
-        console.log(e.clientX);
-        console.log(e.clientY);
-        console.log(cursor.style.left);
-        console.log(cursor.style.top);
         cursor2.style.left = e.clientX + "px";
         cursor2.style.top = e.clientY + "px";
       }

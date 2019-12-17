@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
+const profileImage = require("../img/jun.png");
 class Profile extends Component {
   render() {
     return (
@@ -11,7 +12,11 @@ class Profile extends Component {
         data-hash="slide0"
       >
         <div className="blog-slider__img">
-          <div className="project-header" data-midnight="default"></div>
+          <div
+            className="project-header"
+            data-midnight="default"
+            style={{ background: `url(${profileImage}) center` }}
+          ></div>
         </div>
         <div className="content_wrapper">
           <div className="blog-slider__content cf">
