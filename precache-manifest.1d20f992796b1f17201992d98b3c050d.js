@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7d123c56a3f28368b06d65713ae1ebf",
+    "revision": "e61df5ac443f8f471d8aababfc3a825e",
     "url": "/vancityjun_react/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vancityjun_react/static/css/2.acb72abc.chunk.css"
   },
   {
-    "revision": "d84f7c0696a178210b04",
-    "url": "/vancityjun_react/static/css/main.ca91e390.chunk.css"
+    "revision": "9279db55cf2090df93d8",
+    "url": "/vancityjun_react/static/css/main.20fa80eb.chunk.css"
   },
   {
     "revision": "fb7a8356125519dc03ca",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vancityjun_react/static/js/2.ecd3c52f.chunk.js.LICENSE"
   },
   {
-    "revision": "d84f7c0696a178210b04",
-    "url": "/vancityjun_react/static/js/main.8b1cecd3.chunk.js"
+    "revision": "9279db55cf2090df93d8",
+    "url": "/vancityjun_react/static/js/main.b74c32fb.chunk.js"
   },
   {
     "revision": "dd6f69548fcd07c730f6",
