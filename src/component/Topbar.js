@@ -12,7 +12,7 @@ class Topbar extends Component {
         <div className="closeBtn" style={{ display: "none" }}>
           <span className="arrow"></span>
         </div>
-        <button className="toggle-menu">
+        <button className="toggle-menu hover-target">
           <span></span>
         </button>
       </div>

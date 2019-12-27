@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
-import { TweenMax, ScrollToPlugin, TweenLite, Power1 } from "gsap/all";
+import { TweenMax, ScrollToPlugin, TweenLite, Power1, Linear } from "gsap/all";
 import $ from "jquery";
 import Swiper from "swiper";
 // import Swiper from "swiper/dist/js/swiper.esm.bundle";
@@ -52,6 +52,7 @@ class App extends Component {
     $(".toggle-menu").click(function() {
       $(this).toggleClass("active");
       $(".menu").fadeToggle(600);
+      menuTransform();
     });
 
     $(function() {
@@ -181,15 +182,12 @@ class App extends Component {
       //   );
       // });
 
-      let wrap = $(".blog-slider__img");
+      const wrap = $(".blog-slider__img");
       wrap.on("mousewheel", function() {
         customScroll();
       });
-      if (window.addEventListener) {
-        window.addEventListener("DOMMouseScroll", customScroll, false);
-      }
-      function customScroll(event) {
-        var delta = 0;
+      const customScroll = event => {
+        let delta = 0;
         if (!event) {
           event = window.event;
         }
@@ -199,9 +197,9 @@ class App extends Component {
           delta = -event.detail / 3;
         }
         if (delta) {
-          var scrollTop = $(".scroll").scrollTop();
-          var finScroll = scrollTop - parseInt(delta * 100) * 3;
-          // console.log(scrollTop);
+          const scrollTop = $(".scroll").scrollTop();
+          const finScroll = scrollTop - parseInt(delta * 100) * 3;
+          console.log(finScroll);
           TweenMax.to($(".scroll"), 1, {
             scrollTo: { y: finScroll },
             ease: Power1.easeOut,
@@ -212,15 +210,33 @@ class App extends Component {
           event.preventDefault();
         }
         event.returnValue = false;
+      };
+      if (window.addEventListener) {
+        window.addEventListener("DOMMouseScroll", customScroll, false);
       }
     });
     //menu onclick
     $(".link").on("click", function(e) {
       e.preventDefault();
-      var i = $(".link").index($(this)) + 1;
+      const i = $(".link").index($(this)) + 1;
       swiper.slideTo(i);
     });
-    var backgrounds = [
+    const menuTransform = () => {
+      // this.ref_menuTransform = window.requestAnimationFrame(menuTransform);
+      const menu = $(".menu"),
+        wrapHeight = menu.height(),
+        scrollWrap = $(".scrollWrap"),
+        listHeight = scrollWrap.height();
+      menu.on("mousemove", function(e) {
+        const dP = e.pageY / wrapHeight;
+
+        TweenMax.to(scrollWrap, 0.1, {
+          y: -(listHeight * dP - listHeight / 2),
+          ease: Linear.easeNone
+        });
+      });
+    };
+    const backgrounds = [
       "jun",
       "furence",
       "renewal",
@@ -236,9 +252,10 @@ class App extends Component {
         "background-image",
         "url(" + require("./img/" + backgrounds[i] + ".png") + ")"
       );
+      // cancelAnimationFrame(this.ref_menuTransform);
     };
     const menuActive = () => {
-      var i = $(".swiper-pagination-bullet").index(
+      const i = $(".swiper-pagination-bullet").index(
         $(".swiper-pagination-bullet-active")
       );
       changeBackground(i);
@@ -252,12 +269,12 @@ class App extends Component {
     };
 
     $(".menuWrapper ul li").mouseenter(function() {
-      var i = $(".menuWrapper ul li").index(this);
+      const i = $(".menuWrapper ul li").index(this);
       changeBackground(i);
     });
 
     $(".menuWrapper ul li").mouseleave(function() {
-      var i = $(".swiper-pagination-bullet").index(
+      const i = $(".swiper-pagination-bullet").index(
         $(".swiper-pagination-bullet-active")
       );
       changeBackground(i);
@@ -337,9 +354,13 @@ class App extends Component {
               {slides}
             </div>
             <div className="arrows">
-              <div className="navigation blog-button-prev">prev</div>
+              <div className="navigation blog-button-prev hover-target">
+                prev
+              </div>
               <span className="space"></span>
-              <div className="navigation blog-button-next">next</div>
+              <div className="navigation blog-button-next hover-target">
+                next
+              </div>
             </div>
             <div className="blog-slider__pagination"></div>
           </div>

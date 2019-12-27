@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import $ from "jquery";
-function Menu(props) {
+import { TweenMax, Linear } from "gsap";
+
+const Menu = props => {
   const menuLists = props.projects.map((project, i) => {
     return (
       <li key={i}>
@@ -38,6 +40,6 @@ function Menu(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Menu;

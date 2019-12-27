@@ -1,51 +1,51 @@
 import React, { Component } from "react";
-import { TweenMax, ScrollToPlugin, TweenLite, Power1 } from "gsap/all";
-import $ from "jquery";
 import "../component/cursor.scss";
 
 class Cursor extends Component {
   componentDidMount() {
-    (function() {
-      Math.clamp = function(a, b, c) {
+    (() => {
+      Math.clamp = (a, b, c) => {
         return Math.max(b, Math.min(c, a));
       };
     })();
 
-    function qCursor() {
-      //   var w = window;
+    const qCursor = () => {
       const b = document.getElementsByTagName("body")[0];
-      b.addEventListener("mousemove", mouseMove);
-      var cursor = document.getElementById("cursor");
-      var cursor2 = document.getElementById("cursor2");
-      //   cursorUnhover();
+      const cursor = document.getElementById("cursor");
+      const cursor2 = document.getElementById("cursor2");
 
-      function mouseMove(e) {
+      const mouseMove = e => {
         // Custom Cursor
         cursor.style.left = e.clientX + "px";
         cursor.style.top = e.clientY + "px";
         cursor2.style.left = e.clientX + "px";
         cursor2.style.top = e.clientY + "px";
-      }
+      };
 
-      //   function cursorHover(e) {
-      //     cursor2.classList.add("hover");
-      //   }
-      //   function cursorUnhover(e) {
-      //     cursor2.classList.remove("hover");
-      //   }
+      b.addEventListener("mousemove", mouseMove);
 
-      var hovers = document.querySelectorAll(".hover-target");
+      const cursorHover = e => {
+        cursor2.classList.add("hover");
+      };
+      const cursorUnhover = e => {
+        cursor2.classList.remove("hover");
+      };
+      cursorUnhover();
 
-      for (var i = hovers.length - 1; i >= 0; i--) {
-        var hover = hovers[i];
+      const hovers = document.querySelectorAll(
+        ".hover-target, a, .swiper-pagination-bullet"
+      );
+
+      const hoverHandler = hover => {
+        hover.addEventListener("mouseover", cursorHover);
+        hover.addEventListener("mouseout", cursorUnhover);
+      };
+
+      for (let i = hovers.length - 1; i >= 0; i--) {
+        const hover = hovers[i];
         hoverHandler(hover);
       }
-
-      function hoverHandler(hover) {
-        // hover.addEventListener("mouseover", cursorHover);
-        // hover.addEventListener("mouseout", cursorUnhover);
-      }
-    }
+    };
     qCursor();
   }
   render() {
