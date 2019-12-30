@@ -1,0 +1,95 @@
+@import "variables";
+
+.menu {
+  z-index: 900;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #111727;
+  font-size: 4rem;
+  padding: 0 5%;
+  color: $white-blue;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  .mobile {
+    font-size: 18px;
+    line-height: 1.2;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+  }
+  @media screen and (max-width: 576px) {
+    ul {
+    }
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    .mobile {
+      // display: block;
+    }
+  }
+  .link {
+    position: relative;
+    // transition: 0.3s;
+    text-transform: capitalize;
+    padding: 7% 0;
+    display: block;
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 4px;
+    //   bottom: 50%;
+    //   left: 0;
+    //   background-color: $white-blue;
+    //   transform: scaleX(0) translate(0, 50%);
+    //   transform-origin: bottom right;
+    //   transition: transform 0.3s;
+    // }
+    &:hover,
+    &.active {
+      color: $primary-color;
+      &:after {
+        transform-origin: bottom left;
+        transform: scaleX(1) translate(0, 50%);
+        background-color: $white-blue;
+      }
+    }
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  .menuWrapper {
+    float: left;
+    @media (min-width: 1024px) {
+      width: 40%;
+    }
+    .scrollWrap {
+      position: relative;
+      transition: transform 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0) scale(1);
+      will-change: transform;
+      // -webkit-overflow-scrolling: touch;
+      touch-action: none;
+      width: 100%;
+    }
+  }
+  .imageWrapper {
+    float: right;
+    width: 40%;
+    .preview {
+      width: 100%;
+      height: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      // transition: 0.5s;
+    }
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+}

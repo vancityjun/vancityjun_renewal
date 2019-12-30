@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
-import { TweenMax, ScrollToPlugin, TweenLite, Power1, Linear } from "gsap/all";
+import { TweenMax, ScrollToPlugin, Power1, Linear, Draggable } from "gsap/all";
 import $ from "jquery";
 import Swiper from "swiper";
 // import Swiper from "swiper/dist/js/swiper.esm.bundle";
@@ -12,17 +12,15 @@ import Profile from "./component/Profile.js";
 import Slide from "./component/Slide.js";
 import { projects } from "./data.json";
 import Cursor from "./component/Cursor.js";
-
+import IsMobile from "./helper/IsMobile";
 class App extends Component {
   constructor(props) {
     super(props);
     this.slidehandler = this.slidehandler.bind(this);
-    this.state = {
-      swiper: ""
-    };
   }
+
   componentDidMount() {
-    console.log("App loaded");
+    console.log(IsMobile());
     const swiper = new Swiper(".blog-slider", {
       spaceBetween: 30,
       effect: "fade", //fade slide
@@ -184,7 +182,7 @@ class App extends Component {
 
       const wrap = $(".blog-slider__img");
       wrap.on("mousewheel", function() {
-        customScroll();
+        // customScroll();
       });
       const customScroll = event => {
         let delta = 0;
@@ -227,14 +225,16 @@ class App extends Component {
         wrapHeight = menu.height(),
         scrollWrap = $(".scrollWrap"),
         listHeight = scrollWrap.height();
-      menu.on("mousemove", function(e) {
-        const dP = e.pageY / wrapHeight;
+      !IsMobile
+        ? Draggable.create(".scrollWrap", { type: "y", throwProps: true })
+        : menu.on("mousemove", function(e) {
+            const dP = e.pageY / wrapHeight;
 
-        TweenMax.to(scrollWrap, 0.1, {
-          y: -(listHeight * dP - listHeight / 2),
-          ease: Linear.easeNone
-        });
-      });
+            TweenMax.to(scrollWrap, 0.1, {
+              y: -(listHeight * dP - listHeight / 2),
+              ease: Linear.easeNone
+            });
+          });
     };
     const backgrounds = [
       "jun",
@@ -248,11 +248,14 @@ class App extends Component {
       "award"
     ];
     const changeBackground = i => {
-      $(".preview").css(
-        "background-image",
-        "url(" + require("./img/" + backgrounds[i] + ".png") + ")"
-      );
-      // cancelAnimationFrame(this.ref_menuTransform);
+      TweenMax.to($(".preview"), 0, {
+        css: {
+          backgroundImage:
+            "url(" + require("./img/" + backgrounds[i] + ".png") + ")"
+        },
+        // autoAlpha: 1,
+        ease: Linear.easeOut
+      });
     };
     const menuActive = () => {
       const i = $(".swiper-pagination-bullet").index(
@@ -365,7 +368,7 @@ class App extends Component {
             <div className="blog-slider__pagination"></div>
           </div>
         </div>
-        <Cursor />
+        {IsMobile ? <Cursor /> : null}
       </div>
     );
   }

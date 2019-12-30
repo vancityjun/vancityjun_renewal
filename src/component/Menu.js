@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
-import $ from "jquery";
-import { TweenMax, Linear } from "gsap";
+import React from "react";
 
 const Menu = props => {
   const menuLists = props.projects.map((project, i) => {
     return (
       <li key={i}>
-        <a className="link" href="#">
+        <a className="link" href="# ">
           {project.title}
         </a>
       </li>
@@ -18,20 +16,15 @@ const Menu = props => {
       <div className="menuWrapper">
         <ul className="scrollWrap">
           <li>
-            <a className="link" href="#">
+            <a className="link" href="# ">
               About
             </a>
           </li>
           {menuLists}
         </ul>
         {/*          <div className="info mobile">
-              <p><a href="tel:6043795391">(604) 379 5391</a></p>
               <p><a href="mailto:vancityjun@gmail.com">vancityjun@gmail.com</a>
               </p>
-              <div className="sns">
-                <a href="https://www.facebook.com/vancityjun"><i className="fab fa-facebook-square"></i></a>
-                <a href="https://www.instagram.com/vancityjun"><i className="fab fa-instagram"></i></a>
-              </div>
             </div>
               */}
       </div>

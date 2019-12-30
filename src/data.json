@@ -52,7 +52,7 @@
       "date": "November 2018",
       "description": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
       "url": "https://vancityjun.github.io/sakura-town/",
-      "pc": [],
+      "pc": ["sakura.png"],
       "mobile": [],
       "customContent": "<video playsinline autoplay loop muted><source src=\"../img/shiba_yukata2.mp4\" type=\"video/mp4\"></video>"
     },
@@ -74,7 +74,7 @@
       "date": "",
       "description": "",
       "url": "",
-      "pc": [],
+      "pc": ["insmart.jpg"],
       "mobile": []
     },
     {
@@ -84,7 +84,7 @@
       "date": "",
       "description": "",
       "url": "",
-      "pc": [],
+      "pc": ["wwf.jpg", "febreze.jpg"],
       "mobile": []
     },
     {
@@ -94,7 +94,7 @@
       "date": "",
       "description": "",
       "url": "",
-      "pc": [],
+      "pc": ["natural.jpg"],
       "mobile": []
     }
   ]

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "../component/cursor.scss";
 
-class Cursor extends Component {
-  componentDidMount() {
+const Cursor = () => {
+  useEffect(() => {
     (() => {
       Math.clamp = (a, b, c) => {
         return Math.max(b, Math.min(c, a));
@@ -47,15 +47,13 @@ class Cursor extends Component {
       }
     };
     qCursor();
-  }
-  render() {
-    return (
-      <>
-        <div id="cursor" className="cursor"></div>
-        <div id="cursor2" className="cursor2"></div>
-      </>
-    );
-  }
-}
+  });
+  return (
+    <>
+      <div id="cursor" className="cursor"></div>
+      <div id="cursor2" className="cursor2"></div>
+    </>
+  );
+};
 
 export default Cursor;

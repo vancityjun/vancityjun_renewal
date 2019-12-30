@@ -13,7 +13,7 @@ html {
   left: -100px;
   top: 50%;
   @media screen and (max-width: 1024px) {
-    display: none;
+    // display: none;
   }
 }
 
@@ -45,11 +45,11 @@ html {
   height: 30px;
   width: 30px;
   z-index: 99998;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  -ms-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
   mix-blend-mode: difference;
   &.hover {
     -webkit-transform: scale(2.5) translateX(-25%) translateY(-25%);

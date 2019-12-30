@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactHtmlParser from "react-html-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import ScrollTop from "../component/ScrollTop";
 
-function Slide(props) {
+const Slide = props => {
   const background = {
     background: "url(" + require("../img/" + props.background) + ")",
     backgroundSize: "cover",
@@ -16,21 +16,15 @@ function Slide(props) {
   const mobile = props.mobile.map((mobile, i) => {
     return <img src={require("../img/" + mobile)} alt="" key={i}></img>;
   });
-  // let content;
-  // if (props.mobile.length !== 0 && props.pc.length !== 0) {
-  //   content = (
-  //     <div className="device">
-  //       <a href="#" className="btnDesktop active">
-  //         <i className="fas fa-desktop"></i>
-  //         <span>PC</span>
-  //       </a>
-  //       <a href="#" className="btnMobile">
-  //         <i className="fas fa-mobile-alt"></i>
-  //         <span>Mobile</span>
-  //       </a>
-  //     </div>
-  //   );
-  // }
+  const ScrollDown = () => {
+    if (props.pc.length || props.mobile.length || props.customContent) {
+      return (
+        <a href="# " className="scrollDown" style={{ display: "none" }}>
+          <span></span>
+        </a>
+      );
+    }
+  };
   const size = "3x";
   return (
     <div
@@ -48,52 +42,51 @@ function Slide(props) {
             <h2 className="project-info_title">{props.title}</h2>
             <p className="project-info_detail">{props.description}</p>
             {props.url ? (
-              <a href={props.url} target="_blank" className="view-website">
+              <a
+                href={props.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="view-website"
+              >
                 View website
               </a>
             ) : null}
           </div>
-          <a href="#" className="scrollDown" style={{ display: "none" }}>
-            <span></span>
-          </a>
+          {ScrollDown()}
         </section>
         <div className="project-content cf" data-midnight="bright">
-          {ReactHtmlParser(props.customContent)}
-          {props.pc.length !== 0 ? (
-            <>
-              <div className="device">
-                <a href="#" className="btnDesktop active">
-                  <i className="fas fa-desktop"></i>
-                  <FontAwesomeIcon
-                    icon={faDesktop}
-                    size={size}
-                    style={{ margin: "0 auto" }}
-                  />
-                  <span>PC</span>
-                </a>
-                {props.mobile.length !== 0 ? (
-                  <a href="#" className="btnMobile">
-                    <i className="fas fa-mobile-alt"></i>
-                    <FontAwesomeIcon
-                      icon={faMobileAlt}
-                      size={size}
-                      style={{ margin: "0 auto" }}
-                    />
-                    <span>Mobile</span>
-                  </a>
-                ) : null}
-              </div>
-              <div className="desktop conWrap">{pc}</div>
-              <div className="mobile conWrap" style={{ display: "none" }}>
-                {mobile}
-              </div>
-              <ScrollTop />
-            </>
+          {props.pc.length && props.mobile.length ? (
+            <div className="device">
+              <a href="# " className="btnDesktop active">
+                <i className="fas fa-desktop"></i>
+                <FontAwesomeIcon
+                  icon={faDesktop}
+                  size={size}
+                  style={{ margin: "0 auto" }}
+                />
+                <span>PC</span>
+              </a>
+              <a href="# " className="btnMobile">
+                <i className="fas fa-mobile-alt"></i>
+                <FontAwesomeIcon
+                  icon={faMobileAlt}
+                  size={size}
+                  style={{ margin: "0 auto" }}
+                />
+                <span>Mobile</span>
+              </a>
+            </div>
           ) : null}
-          {/* <div className="desktop conWrap">{pc}</div>
-          <div className="mobile conWrap" style={{ display: "none" }}>
+          {props.pc.length || props.customContent ? (
+            <div className="desktop conWrap">
+              {ReactHtmlParser(props.customContent)}
+              {pc}
+            </div>
+          ) : null}
+          <div className="mobile conWrap cf" style={{ display: "none" }}>
             {mobile}
-          </div> */}
+          </div>
+          <ScrollTop />
         </div>
       </div>
       <div className="content_wrapper works">
@@ -102,14 +95,12 @@ function Slide(props) {
           <div className="blog-slider__title">{props.title}</div>
           <div className="blog-slider__text">{props.category}</div>
           <p className="blog-slider__button">
-            <a href="javascript:void(0);" target="_blank">
-              See more
-            </a>
+            <a href="# ">See more</a>
           </p>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Slide;
