@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/vancityjun_react/static/css/main.20fa80eb.chunk.css",
-    "main.js": "/vancityjun_react/static/js/main.b74c32fb.chunk.js",
-    "main.js.map": "/vancityjun_react/static/js/main.b74c32fb.chunk.js.map",
+    "main.css": "/vancityjun_react/static/css/main.0890d582.chunk.css",
+    "main.js": "/vancityjun_react/static/js/main.9e70f0b5.chunk.js",
+    "main.js.map": "/vancityjun_react/static/js/main.9e70f0b5.chunk.js.map",
     "runtime-main.js": "/vancityjun_react/static/js/runtime-main.f8bd5353.js",
     "runtime-main.js.map": "/vancityjun_react/static/js/runtime-main.f8bd5353.js.map",
     "static/css/2.acb72abc.chunk.css": "/vancityjun_react/static/css/2.acb72abc.chunk.css",
-    "static/js/2.ecd3c52f.chunk.js": "/vancityjun_react/static/js/2.ecd3c52f.chunk.js",
-    "static/js/2.ecd3c52f.chunk.js.map": "/vancityjun_react/static/js/2.ecd3c52f.chunk.js.map",
+    "static/js/2.dea1d1a2.chunk.js": "/vancityjun_react/static/js/2.dea1d1a2.chunk.js",
+    "static/js/2.dea1d1a2.chunk.js.map": "/vancityjun_react/static/js/2.dea1d1a2.chunk.js.map",
     "index.html": "/vancityjun_react/index.html",
-    "precache-manifest.1d20f992796b1f17201992d98b3c050d.js": "/vancityjun_react/precache-manifest.1d20f992796b1f17201992d98b3c050d.js",
+    "precache-manifest.e882b5ac28ddddf268f63d30c56e8b4d.js": "/vancityjun_react/precache-manifest.e882b5ac28ddddf268f63d30c56e8b4d.js",
     "service-worker.js": "/vancityjun_react/service-worker.js",
     "static/css/2.acb72abc.chunk.css.map": "/vancityjun_react/static/css/2.acb72abc.chunk.css.map",
-    "static/css/main.20fa80eb.chunk.css.map": "/vancityjun_react/static/css/main.20fa80eb.chunk.css.map",
-    "static/js/2.ecd3c52f.chunk.js.LICENSE": "/vancityjun_react/static/js/2.ecd3c52f.chunk.js.LICENSE",
+    "static/css/main.0890d582.chunk.css.map": "/vancityjun_react/static/css/main.0890d582.chunk.css.map",
+    "static/js/2.dea1d1a2.chunk.js.LICENSE": "/vancityjun_react/static/js/2.dea1d1a2.chunk.js.LICENSE",
     "static/media/award.png": "/vancityjun_react/static/media/award.0b279869.png",
     "static/media/dashboard.png": "/vancityjun_react/static/media/dashboard.3ae82bc7.png",
     "static/media/febreze.jpg": "/vancityjun_react/static/media/febreze.5ef70a52.jpg",
@@ -55,8 +55,8 @@
   "entrypoints": [
     "static/js/runtime-main.f8bd5353.js",
     "static/css/2.acb72abc.chunk.css",
-    "static/js/2.ecd3c52f.chunk.js",
-    "static/css/main.20fa80eb.chunk.css",
-    "static/js/main.b74c32fb.chunk.js"
+    "static/js/2.dea1d1a2.chunk.js",
+    "static/css/main.0890d582.chunk.css",
+    "static/js/main.9e70f0b5.chunk.js"
   ]
 }
