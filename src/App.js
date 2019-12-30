@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(IsMobile());
     const swiper = new Swiper(".blog-slider", {
       spaceBetween: 30,
       effect: "fade", //fade slide
