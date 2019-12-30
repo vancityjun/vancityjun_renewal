@@ -214,13 +214,12 @@ const App = () => {
       swiper.slideTo(i);
     });
     const menuTransform = () => {
-      // this.ref_menuTransform = window.requestAnimationFrame(menuTransform);
       const menu = $(".menu"),
         wrapHeight = menu.height(),
         scrollWrap = $(".scrollWrap"),
         listHeight = scrollWrap.height();
       IsMobile()
-        ? Draggable.create(".scrollWrap", { type: "y", throwProps: true })
+        ? $("menuWrapper").css({ "overflow-y": "scroll", display: "block" })
         : menu.on("mousemove", function(e) {
             const dP = e.pageY / wrapHeight;
             TweenMax.to(scrollWrap, 0.1, {
@@ -229,22 +228,12 @@ const App = () => {
             });
           });
     };
-    const backgrounds = [
-      "jun",
-      "furence",
-      "renewal",
-      "itsm",
-      "shiba",
-      "recsee-video",
-      "award",
-      "award",
-      "award"
-    ];
+    projects.unshift({ background: "jun.png" });
     const changeBackground = i => {
       TweenMax.to($(".preview"), 0, {
         css: {
           backgroundImage:
-            "url(" + require("./img/" + backgrounds[i] + ".png") + ")"
+            "url(" + require("./img/" + projects[i].background) + ")"
         },
         // autoAlpha: 1,
         ease: Linear.easeOut
