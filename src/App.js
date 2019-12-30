@@ -16,8 +16,7 @@ import IsMobile from "./helper/IsMobile";
 
 const App = () => {
   useEffect(() => {
-    console.log(IsMobile());
-    const swiper = new Swiper(".blog-slider", {
+    const MySwiper = new Swiper(".blog-slider", {
       spaceBetween: 30,
       effect: "fade", //fade slide
       loop: true,
@@ -41,7 +40,6 @@ const App = () => {
       },
       direction: "vertical"
     });
-
     $(".toggle-menu").click(function() {
       $(this).toggleClass("active");
       $(".menu").fadeToggle(600);
@@ -83,8 +81,8 @@ const App = () => {
       $(".blog-slider__pagination").fadeOut(400);
       $(".arrows").fadeOut(400);
       $(".swiper-wrapper").addClass("swiper-no-swiping");
-      swiper.mousewheel.disable();
-      swiper.keyboard.disable();
+      MySwiper.mousewheel.disable();
+      MySwiper.keyboard.disable();
       $(".swiper-slide-active").addClass("scroll");
       $(".scroll").animate(
         {
@@ -139,8 +137,8 @@ const App = () => {
       $(".blog-slider__pagination").fadeIn(fod);
       $(".arrows").fadeIn(fod);
       $(".swiper-wrapper").removeClass("swiper-no-swiping");
-      swiper.mousewheel.enable();
-      swiper.keyboard.enable();
+      MySwiper.mousewheel.enable();
+      MySwiper.keyboard.enable();
     };
     /* CLOSE BUTTON */
     $(".closeBtn").on("click", function(e) {
@@ -211,7 +209,7 @@ const App = () => {
     $(".link").on("click", function(e) {
       e.preventDefault();
       const i = $(".link").index($(this)) + 1;
-      swiper.slideTo(i);
+      MySwiper.slideTo(i);
     });
     const menuTransform = () => {
       const menu = $(".menu"),
@@ -219,7 +217,7 @@ const App = () => {
         scrollWrap = $(".scrollWrap"),
         listHeight = scrollWrap.height();
       IsMobile()
-        ? $("menuWrapper").css({ "overflow-y": "scroll", display: "block" })
+        ? $(".menuWrapper").css({ "overflow-y": "scroll", display: "block" })
         : menu.on("mousemove", function(e) {
             const dP = e.pageY / wrapHeight;
             TweenMax.to(scrollWrap, 0.1, {
@@ -265,7 +263,7 @@ const App = () => {
       changeBackground(i);
     });
 
-    swiper.on("slideChange", function() {
+    MySwiper.on("slideChange", function() {
       menuActive();
     });
 
