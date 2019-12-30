@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vancityjun_react/static/css/main.0890d582.chunk.css",
-    "main.js": "/vancityjun_react/static/js/main.9e70f0b5.chunk.js",
-    "main.js.map": "/vancityjun_react/static/js/main.9e70f0b5.chunk.js.map",
+    "main.js": "/vancityjun_react/static/js/main.734621d4.chunk.js",
+    "main.js.map": "/vancityjun_react/static/js/main.734621d4.chunk.js.map",
     "runtime-main.js": "/vancityjun_react/static/js/runtime-main.f8bd5353.js",
     "runtime-main.js.map": "/vancityjun_react/static/js/runtime-main.f8bd5353.js.map",
     "static/css/2.acb72abc.chunk.css": "/vancityjun_react/static/css/2.acb72abc.chunk.css",
     "static/js/2.dea1d1a2.chunk.js": "/vancityjun_react/static/js/2.dea1d1a2.chunk.js",
     "static/js/2.dea1d1a2.chunk.js.map": "/vancityjun_react/static/js/2.dea1d1a2.chunk.js.map",
     "index.html": "/vancityjun_react/index.html",
-    "precache-manifest.e882b5ac28ddddf268f63d30c56e8b4d.js": "/vancityjun_react/precache-manifest.e882b5ac28ddddf268f63d30c56e8b4d.js",
+    "precache-manifest.60ebb01cb0167d0dea3300079513e800.js": "/vancityjun_react/precache-manifest.60ebb01cb0167d0dea3300079513e800.js",
     "service-worker.js": "/vancityjun_react/service-worker.js",
     "static/css/2.acb72abc.chunk.css.map": "/vancityjun_react/static/css/2.acb72abc.chunk.css.map",
     "static/css/main.0890d582.chunk.css.map": "/vancityjun_react/static/css/main.0890d582.chunk.css.map",
@@ -57,6 +57,6 @@
     "static/css/2.acb72abc.chunk.css",
     "static/js/2.dea1d1a2.chunk.js",
     "static/css/main.0890d582.chunk.css",
-    "static/js/main.9e70f0b5.chunk.js"
+    "static/js/main.734621d4.chunk.js"
   ]
 }
