@@ -2,6 +2,9 @@
 body,
 html {
   cursor: none;
+  @media screen and (max-width: 600px) {
+    cursor: auto;
+  }
 }
 .cursor,
 .cursor2,

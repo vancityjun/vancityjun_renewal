@@ -16,7 +16,8 @@
     "react-html-parser": "^2.0.2",
     "react-scripts": "^3.3.0",
     "sass-loader": "^8.0.0",
-    "swiper": "^4.5.0"
+    "swiper": "^4.5.0",
+    "use-media": "^1.4.0"
   },
   "scripts": {
     "deploy": "gh-pages -d build",

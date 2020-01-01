@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.scss";
-import { TweenMax, ScrollToPlugin, Power1, Linear, Draggable } from "gsap/all";
+import { TweenMax, ScrollToPlugin, Power1, Linear } from "gsap/all";
 import $ from "jquery";
 import Swiper from "swiper";
 // import Swiper from "swiper/dist/js/swiper.esm.bundle";
@@ -13,7 +13,6 @@ import Slide from "./component/Slide.js";
 import { projects } from "./data.json";
 import Cursor from "./component/Cursor.js";
 import IsMobile from "./helper/IsMobile";
-
 const App = () => {
   useEffect(() => {
     const MySwiper = new Swiper(".blog-slider", {

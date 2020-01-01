@@ -467,11 +467,8 @@
     bottom: auto !important;
     transform: translateY(-50%);
     counter-reset: section;
-    @media screen and (max-width: 768px) {
-      transform: translateX(-50%);
-      left: 20px !important;
-      top: auto !important;
-      bottom: 30px !important;
+    @media screen and (max-width: 600px) {
+      display: none !important;
     }
 
     &.swiper-pagination-bullets .swiper-pagination-bullet {
