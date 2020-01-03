@@ -31,7 +31,16 @@
     // transition: 0.3s;
     text-transform: capitalize;
     padding: 7% 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 600px) {
+      &:before {
+        counter-increment: menu;
+        content: counter(menu, decimal-leading-zero);
+        font-size: 40%;
+        margin-right: 4%;
+      }
+    }
     // &:after {
     //   content: "";
     //   position: absolute;
@@ -63,6 +72,7 @@
   .menuWrapper {
     float: left;
     -webkit-overflow-scrolling: touch;
+    counter-reset: menu;
     @media (min-width: 1024px) {
       width: 40%;
     }
