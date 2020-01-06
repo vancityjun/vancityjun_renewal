@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.scss";
-import { TweenMax, Power1, Linear } from "gsap/dist/gsap";
+import { TweenMax, Power1, Linear } from "gsap";
 import $ from "jquery";
 import Swiper from "swiper";
 // import Swiper from "swiper/dist/js/swiper.esm.bundle";
@@ -218,7 +218,6 @@ const App = () => {
       IsMobile()
         ? $(".menuWrapper").css({ "overflow-y": "scroll", display: "block" })
         : menu.on("mousemove", function(e) {
-            console.log("mousemove");
             const dP = e.pageY / wrapHeight;
             TweenMax.to(scrollWrap, 0.1, {
               y: -(listHeight * dP - listHeight / 2),
