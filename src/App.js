@@ -218,7 +218,6 @@ const App = () => {
       IsMobile()
         ? $(".menuWrapper").css({ "overflow-y": "scroll", display: "block" })
         : menu.on("mousemove", function(e) {
-            console.log("mousemove");
             const dP = e.pageY / wrapHeight;
             TweenMax.to(scrollWrap, 0.1, {
               y: -(listHeight * dP - listHeight / 2),
