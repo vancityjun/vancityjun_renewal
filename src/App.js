@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.scss";
-import { TweenMax, ScrollToPlugin, Power1, Linear } from "gsap/all";
+import { TweenMax, Power1, Linear } from "gsap/dist/gsap";
 import $ from "jquery";
 import Swiper from "swiper";
 // import Swiper from "swiper/dist/js/swiper.esm.bundle";
