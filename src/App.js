@@ -215,15 +215,16 @@ const App = () => {
         wrapHeight = menu.height(),
         scrollWrap = $(".scrollWrap"),
         listHeight = scrollWrap.height();
-      IsMobile()
-        ? $(".menuWrapper").css({ "overflow-y": "scroll", display: "block" })
-        : menu.on("mousemove", function(e) {
-            const dP = e.pageY / wrapHeight;
-            TweenMax.to(scrollWrap, 0.1, {
-              y: -(listHeight * dP - listHeight / 2),
-              ease: Linear.easeNone
-            });
-          });
+      // IsMobile()
+      //   ? $(".menuWrapper").css({ "overflow-y": "scroll", display: "block" })
+      //   :
+      menu.on("mousemove", function(e) {
+        const dP = e.pageY / wrapHeight;
+        TweenMax.to(scrollWrap, 0.1, {
+          y: -(listHeight * dP - listHeight / 2),
+          ease: Linear.easeNone
+        });
+      });
     };
     projects.unshift({ background: "jun.png" });
     const changeBackground = i => {
