@@ -5,8 +5,9 @@
       "category": "web design & development",
       "background": "furence.png",
       "date": "August 2018",
-      "description": "Furence is a Korean company that I worked before. It has been renewed and the website is made with Codeignitor framework.",
+      "shortDescription": "company website",
       "url": "http://www.furence.com/",
+      "description": "This website has been renovated with Codeignitor framework.",
       "pc": ["furence1600all.png"],
       "mobile": [
         "furence-mobile-1.png",
@@ -22,8 +23,9 @@
       "category": "web design & development",
       "background": "perrysherry.png",
       "date": "August 2019",
-      "description": "Wedding RSVP website made with React.js",
+      "shortDescription": "Wedding RSVP website made with React.js",
       "url": "https://perrysherry.netlify.com/",
+      "description": "",
       "pc": [],
       "mobile": []
     },
@@ -32,8 +34,9 @@
       "category": "Application design & development ",
       "background": "itsm.png",
       "date": "December 2018",
-      "description": "Dashboard Application",
+      "shortDescription": "Dashboard Application",
       "url": "https://vancityjun.github.io/itsm/",
+      "description": "",
       "pc": [
         "itsm-login.png",
         "dashboard.png",
@@ -50,8 +53,9 @@
       "category": "3D Character design WebGL",
       "background": "shiba.png",
       "date": "November 2018",
-      "description": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
+      "shortDescription": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
       "url": "https://vancityjun.github.io/sakura-town/",
+      "description": "",
       "pc": ["sakura.png"],
       "mobile": [],
       "customContent": "<video playsinline autoplay loop muted><source src=\"../img/shiba_yukata2.mp4\" type=\"video/mp4\"></video>"
@@ -61,8 +65,9 @@
       "category": "Motion Graphic",
       "background": "recsee-video.png",
       "date": "November 2018",
-      "description": "Motion Graphic",
+      "shortDescription": "Motion Graphic",
       "url": "",
+      "description": "",
       "pc": [],
       "mobile": [],
       "customContent": "<div class=\"videoWrapper\" style=\"display:none;\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pGe_YpY2bG8?rel=0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>"
@@ -72,8 +77,9 @@
       "category": "B.I Design",
       "background": "award.png",
       "date": "",
-      "description": "",
+      "shortDescription": "",
       "url": "",
+      "description": "",
       "pc": ["insmart.jpg"],
       "mobile": []
     },
@@ -82,8 +88,9 @@
       "category": "Advertisement Poster Design",
       "background": "award.png",
       "date": "",
-      "description": "",
+      "shortDescription": "",
       "url": "",
+      "description": "",
       "pc": ["wwf.jpg", "febreze.jpg"],
       "mobile": []
     },
@@ -92,8 +99,9 @@
       "category": "Water Color",
       "background": "award.png",
       "date": "",
-      "description": "",
+      "shortDescription": "",
       "url": "",
+      "description": "",
       "pc": ["natural.jpg"],
       "mobile": []
     }

@@ -10,6 +10,7 @@ import Topbar from "./component/Topbar.js";
 import Menu from "./component/Menu.js";
 import Profile from "./component/Profile.js";
 import Slide from "./component/Slide.js";
+import Loading from "./component/Loading.js";
 import { projects } from "./data.json";
 import Cursor from "./component/Cursor.js";
 import IsMobile from "./helper/IsMobile";
@@ -303,6 +304,7 @@ const App = () => {
       menuActive();
     });
   });
+
   const slidehandler = i => {
     this.swiper.slideTo(i);
   };
@@ -315,8 +317,9 @@ const App = () => {
         category={projects.category}
         background={projects.background}
         date={projects.date}
-        description={projects.description}
+        shortDescription={projects.shortDescription}
         url={projects.url}
+        description={projects.description}
         pc={projects.pc}
         mobile={projects.mobile}
         customContent={projects.customContent}
@@ -325,6 +328,7 @@ const App = () => {
   });
   return (
     <div className="App">
+      <Loading />
       <div className="wrapper">
         <Topbar />
         <Menu projects={projects} />

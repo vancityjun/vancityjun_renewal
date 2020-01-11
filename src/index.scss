@@ -38,9 +38,14 @@ li {
 body {
   // height: 100vh;
   font-family: $main-font;
+  color: $secondary-color;
   font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

@@ -1,4 +1,4 @@
-@import "variables";
+@import "../variables";
 
 .blog-slider {
   // width: 95%;
@@ -24,10 +24,10 @@
     }
     .project-info {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+      bottom: 10%;
+      left: 10%;
+      // transform: translate(-50%, -50%);
+      // text-align: center;
       color: #e8ebf1;
       // width: 40%;
 
@@ -38,7 +38,7 @@
       }
 
       &_title {
-        font-size: 10vw;
+        font-size: 6vw;
         line-height: 1;
         text-transform: capitalize;
         @media screen and(max-width: 576px) {
@@ -47,20 +47,8 @@
       }
 
       &_detail {
+        max-width: 600px;
         font-size: 22px;
-        @media screen and(max-width: 576px) {
-          font-size: 20px;
-        }
-      }
-
-      .view-website {
-        // height: 42px;
-        font-size: 22px;
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 40px;
-        border-radius: 50px;
-        border: 1px solid;
         @media screen and(max-width: 576px) {
           font-size: 20px;
         }
@@ -77,6 +65,18 @@
             }
           }
         }
+      }
+    }
+    .view-website {
+      position: absolute;
+      color: white;
+      bottom: 10%;
+      right: 10%;
+      font-size: 22px;
+      display: inline-block;
+      margin-top: 40px;
+      @media screen and(max-width: 576px) {
+        font-size: 20px;
       }
     }
 
@@ -182,16 +182,14 @@
         .project-content {
           display: none;
           width: 100%;
-          background: #efefef;
+          background: #e4e9ef;
 
           .device {
-            background: #191919;
             padding: 30px 0;
             text-align: center;
             a {
               width: 80px;
               display: inline-grid;
-              color: $light-gray;
               margin: 10px 30px;
               transition: 0.3s;
               i {
@@ -203,7 +201,7 @@
               }
               &:hover,
               &.active {
-                color: $grey-blue;
+                // color: $grey-blue;
               }
             }
           }

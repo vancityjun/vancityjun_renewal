@@ -4,7 +4,7 @@ const Menu = props => {
   const menuLists = props.projects.map((project, i) => {
     return (
       <li key={i}>
-        <a className="link" href="# ">
+        <a className="link" href>
           {project.title}
         </a>
       </li>
@@ -16,7 +16,7 @@ const Menu = props => {
       <div className="menuWrapper">
         <ul className="scrollWrap">
           <li>
-            <a className="link" href="# ">
+            <a className="link" href>
               About
             </a>
           </li>

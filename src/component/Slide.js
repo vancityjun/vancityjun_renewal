@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactHtmlParser from "react-html-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
@@ -19,12 +19,14 @@ const Slide = props => {
   const ScrollDown = () => {
     if (props.pc.length || props.mobile.length || props.customContent) {
       return (
-        <a href="# " className="scrollDown" style={{ display: "none" }}>
+        <a href className="scrollDown" style={{ display: "none" }}>
           <span></span>
         </a>
       );
     }
   };
+  useEffect(() => {});
+  // remove pc, mobile icon and change design
   const size = "3x";
   return (
     <div
@@ -40,39 +42,27 @@ const Slide = props => {
           <div className="info-background"></div>
           <div className="project-info">
             <h2 className="project-info_title">{props.title}</h2>
-            <p className="project-info_detail">{props.description}</p>
-            {props.url ? (
-              <a
-                href={props.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="view-website"
-              >
-                View website
-              </a>
-            ) : null}
+            <p className="project-info_detail">{props.shortDescription}</p>
           </div>
+          {props.url ? (
+            <a
+              href={props.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="view-website"
+            >
+              View website
+            </a>
+          ) : null}
           {ScrollDown()}
         </section>
         <div className="project-content cf" data-midnight="bright">
           {props.pc.length && props.mobile.length ? (
             <div className="device">
-              <a href="# " className="btnDesktop active">
-                <i className="fas fa-desktop"></i>
-                <FontAwesomeIcon
-                  icon={faDesktop}
-                  size={size}
-                  style={{ margin: "0 auto" }}
-                />
+              <a href className="btnDesktop active">
                 <span>PC</span>
               </a>
-              <a href="# " className="btnMobile">
-                <i className="fas fa-mobile-alt"></i>
-                <FontAwesomeIcon
-                  icon={faMobileAlt}
-                  size={size}
-                  style={{ margin: "0 auto" }}
-                />
+              <a href className="btnMobile">
                 <span>Mobile</span>
               </a>
             </div>
