@@ -3,6 +3,8 @@ import "./App.scss";
 import { TweenMax, Power1, Linear } from "gsap";
 import $ from "jquery";
 import Swiper from "swiper";
+import ReactGA from "react-ga";
+
 // import Swiper from "swiper/dist/js/swiper.esm.bundle";
 import "swiper/dist/css/swiper.min.css";
 // import { extname } from "path";
@@ -14,6 +16,12 @@ import Loading from "./component/Loading.js";
 import { projects } from "./data.json";
 import Cursor from "./component/Cursor.js";
 import IsMobile from "./helper/IsMobile";
+
+export const initializeReactGA = () => {
+  ReactGA.initialize("UA-89794136-1");
+  ReactGA.pageview(window.location.pathname);
+};
+
 const App = () => {
   useEffect(() => {
     const MySwiper = new Swiper(".blog-slider", {
@@ -303,6 +311,7 @@ const App = () => {
     $(document).ready(function() {
       menuActive();
     });
+    initializeReactGA();
   });
 
   const slidehandler = i => {
