@@ -31,7 +31,7 @@
     },
     {
       "title": "ITSM",
-      "category": "Application design & development ",
+      "category": "application design & development ",
       "background": "itsm.png",
       "date": "December 2018",
       "shortDescription": "Dashboard Application",
@@ -46,6 +46,17 @@
         "itsm-report.png",
         "itsm-setting.png"
       ],
+      "mobile": []
+    },
+    {
+      "title": "Landing Page",
+      "category": "web design & development",
+      "background": "furence-landing.png",
+      "date": "August 2018",
+      "shortDescription": "Company Landing Page",
+      "url": "https://furence-landing.netlify.com/",
+      "description": "",
+      "pc": [],
       "mobile": []
     },
     {

@@ -8,29 +8,6 @@
   @media screen and (max-width: 576px) {
   }
 
-  .logo {
-    color: #fff;
-    font-family: $secondary-font;
-    display: flex;
-    align-items: center;
-    float: left;
-    margin-left: 3%;
-    min-height: 50px;
-
-    span {
-      color: #ec0f0f;
-    }
-    font-size: 48px;
-    @media screen and (max-width: 576px) {
-      font-size: 24px;
-    }
-
-    h1 {
-      font-size: inherit;
-      font-weight: 300;
-      margin: 0;
-    }
-  }
   .closeBtn {
     position: absolute;
     top: 50%;
