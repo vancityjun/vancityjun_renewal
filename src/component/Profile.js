@@ -24,7 +24,7 @@ const Profile = () => {
           <div className="blog-slider__title">Jun Lee</div>
           <div className="blog-slider__text">
             <q>
-              I'm a front-end developer in Vancouver.
+              I'm a React Developer in Vancouver.
               <br></br> I'd like to learn and discover new things every day to
               improve myself and am very adaptable.
             </q>

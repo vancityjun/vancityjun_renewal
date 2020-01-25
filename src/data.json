@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "furence",
-      "category": "web design & development",
+      "category": "Web Design & Development",
       "background": "furence.png",
       "date": "August 2018",
       "shortDescription": "company website",
@@ -20,18 +20,22 @@
     },
     {
       "title": "perry & sherry",
-      "category": "web design & development",
+      "category": "Web Design & Development",
       "background": "perrysherry.png",
       "date": "August 2019",
       "shortDescription": "Wedding RSVP website made with React.js",
       "url": "https://perrysherry.netlify.com/",
       "description": "",
-      "pc": [],
+      "pc": [
+        "perry-sherry-ourstory.png",
+        "perry-sherry-location.png",
+        "perry-sherry-rsvp.png"
+      ],
       "mobile": []
     },
     {
       "title": "ITSM",
-      "category": "application design & development ",
+      "category": "Application Design & Development ",
       "background": "itsm.png",
       "date": "December 2018",
       "shortDescription": "Dashboard Application",
@@ -50,13 +54,13 @@
     },
     {
       "title": "Landing Page",
-      "category": "web design & development",
+      "category": "Web Design & Development",
       "background": "furence-landing.png",
       "date": "August 2018",
       "shortDescription": "Company Landing Page",
       "url": "https://furence-landing.netlify.com/",
       "description": "",
-      "pc": [],
+      "pc": ["furence-landing-pc.png"],
       "mobile": []
     },
     {
@@ -69,7 +73,7 @@
       "description": "",
       "pc": ["sakura.png"],
       "mobile": [],
-      "customContent": "<video playsinline autoplay loop muted><source src=\"../img/shiba_yukata2.mp4\" type=\"video/mp4\"></video>"
+      "customContent": ""
     },
     {
       "title": "RecSee",
@@ -84,36 +88,14 @@
       "customContent": "<div class=\"videoWrapper\" style=\"display:none;\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pGe_YpY2bG8?rel=0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>"
     },
     {
-      "title": "Insmart",
-      "category": "B.I Design",
-      "background": "award.png",
-      "date": "",
-      "shortDescription": "",
-      "url": "",
-      "description": "",
-      "pc": ["insmart.jpg"],
-      "mobile": []
-    },
-    {
       "title": "Award wining",
-      "category": "Advertisement Poster Design",
+      "category": "Design Projects",
       "background": "award.png",
       "date": "",
       "shortDescription": "",
       "url": "",
       "description": "",
-      "pc": ["wwf.jpg", "febreze.jpg"],
-      "mobile": []
-    },
-    {
-      "title": "The God of Natural",
-      "category": "Water Color",
-      "background": "award.png",
-      "date": "",
-      "shortDescription": "",
-      "url": "",
-      "description": "",
-      "pc": ["natural.jpg"],
+      "pc": ["insmart.jpg", "wwf.jpg", "febreze.jpg", "natural.jpg"],
       "mobile": []
     }
   ]
