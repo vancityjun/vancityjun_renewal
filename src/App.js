@@ -73,7 +73,7 @@ const App = () => {
         .css("display", "block");
       $(".closeBtn").fadeIn(600);
       $(".swiper-slide-active")
-        .find(".project-info")
+        .find(".project-info, .view-website")
         .addClass("active");
       if (htmlWidth > 576) {
         $(".swiper-slide-active")
@@ -131,7 +131,7 @@ const App = () => {
         .css("right", "300px");
       $(".closeBtn").fadeOut(600);
       $(".swiper-slide")
-        .find(".project-info")
+        .find(".project-info, .view-website")
         .removeClass("active");
       $(".swiper-slide")
         .find(".scrollDown")
