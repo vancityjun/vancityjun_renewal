@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const profileImage = require("../img/jun.png");
+const profileImage = require("../img/jun-developer.png");
 const style = {
   background: `url(${profileImage}) center`,
   backgroundSize: "cover"
