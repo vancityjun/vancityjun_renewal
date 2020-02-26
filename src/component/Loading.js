@@ -10,11 +10,9 @@ const Loading = () => {
   })
   return (
     <div className='loading'>
-      <div className='logo'>
-        <h1>
-          <span>V</span>ancity <span>J</span>un
-        </h1>
-      </div>
+      <span className='loader'>
+        <span className='loader-inner' />
+      </span>
     </div>
   )
 }
