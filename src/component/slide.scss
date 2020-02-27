@@ -1,4 +1,4 @@
-@import "../variables";
+@import '../variables';
 
 .blog-slider {
   position: relative;
@@ -217,20 +217,17 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             @media screen and (max-width: 576px) {
               padding: 5%;
             }
             &.mobile {
               img {
-                width: calc((100% / 3) - 20px);
-                float: left;
-                margin-right: 10px;
-                margin-left: 10px;
+                max-width: 375px;
                 @media screen and (max-width: 576px) {
-                  margin-right: auto;
-                  margin-left: auto;
-                  width: 100%;
-                  max-width: 375px;
+                  width: calc(50% - 3%);
                 }
               }
             }
@@ -238,11 +235,8 @@
           .conWrap > * {
             width: 100%;
             opacity: 1;
-            box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.2);
-            margin-bottom: 40px;
-            @media screen and (max-width: 576px) {
-              margin-bottom: 20px;
-            }
+            box-shadow: 0px 6px 12px 0px rgba(50, 50, 50, 0.2);
+            margin-bottom: 60px;
             .descBox {
               font-size: 20px;
               color: #fff;
@@ -308,11 +302,6 @@
       object-fit: cover;
       display: block;
       transition: all 0.3s;
-      @media screen and (max-width: 576px) {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-      }
     }
   }
 
@@ -436,7 +425,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       display: block;
       border-bottom: 2px solid $primary-color;
       width: 26vw;
@@ -482,7 +471,7 @@
 
       &:before {
         counter-increment: section;
-        content: "" counter(section, upper-roman);
+        content: '' counter(section, upper-roman);
         position: absolute;
         left: 45px;
         opacity: 0;
