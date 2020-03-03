@@ -19,6 +19,17 @@
       ]
     },
     {
+      "title": "R10",
+      "category": "App Development",
+      "background": "r10.png",
+      "date": "Jan 2020",
+      "shortDescription": "A mobile app for a conference called R10",
+      "url": "",
+      "description": "React Native cross plarform Mobile App",
+      "pc": [],
+      "mobile": []
+    },
+    {
       "title": "perry & sherry",
       "category": "Web Design & Development",
       "background": "perrysherry.png",
