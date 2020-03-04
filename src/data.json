@@ -27,7 +27,12 @@
       "url": "",
       "description": "React Native cross plarform Mobile App",
       "pc": [],
-      "mobile": []
+      "mobile": [
+        "r10-about.png",
+        "r10-schedule.png",
+        "r10-session.png",
+        "r10-speaker.png"
+      ]
     },
     {
       "title": "perry & sherry",

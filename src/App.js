@@ -235,7 +235,7 @@ const App = () => {
             })
           })
     }
-    projects.unshift({ background: 'jun.png' })
+    projects.unshift({ background: 'jun-developer.png' })
     const changeBackground = i => {
       TweenMax.to($('.preview'), 0, {
         css: {

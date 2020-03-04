@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import ReactHtmlParser from 'react-html-parser'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDesktop, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
+
 import ScrollTop from '../component/ScrollTop'
+import ProjectContent from './ProjectContent'
 
 const Slide = ({
   pc,
@@ -21,12 +21,7 @@ const Slide = ({
     backgroundSize: 'cover',
     backgroundPosition: '50%'
   }
-  const pcScreen = pc.map((pc, i) => {
-    return <img src={require('../img/' + pc)} alt="" key={i}></img>
-  })
-  const mobileScreen = mobile.map((mobile, i) => {
-    return <img src={require('../img/' + mobile)} alt="" key={i}></img>
-  })
+
   const ScrollDown = () => {
     if (pc.length || mobile.length || customContent) {
       return (
@@ -60,28 +55,8 @@ const Slide = ({
           ) : null}
           {ScrollDown()}
         </section>
-        <div className="project-content cf">
-          {pc.length && mobile.length ? (
-            <div className="device">
-              <a href className="btnDesktop active">
-                <span>PC</span>
-              </a>
-              <a href className="btnMobile">
-                <span>Mobile</span>
-              </a>
-            </div>
-          ) : null}
-          {pc.length || customContent ? (
-            <div className="desktop conWrap">
-              {ReactHtmlParser(customContent)}
-              {pcScreen}
-            </div>
-          ) : null}
-          <div className="mobile conWrap" style={{ display: 'none' }}>
-            {mobileScreen}
-          </div>
-          {/* <ScrollTop /> */}
-        </div>
+
+        <ProjectContent pc={pc} mobile={mobile} customContent={customContent} />
       </div>
       <div className="content_wrapper works">
         <div className="blog-slider__content cf">
