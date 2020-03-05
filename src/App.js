@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.scss'
-import { TweenMax, Power1, Linear } from 'gsap'
+import { TweenMax, Power1, Linear, TimelineMax } from 'gsap'
 import $ from 'jquery'
 import Swiper from 'swiper'
 import ReactGA from 'react-ga'
@@ -16,6 +16,7 @@ import Loading from './component/Loading.js'
 import { projects } from './data.json'
 import Cursor from './component/Cursor.js'
 import IsMobile from './helper/IsMobile'
+import ProgressBar from './component/ProgressBar'
 
 export const initializeReactGA = () => {
   ReactGA.initialize('UA-89794136-1')
@@ -23,6 +24,15 @@ export const initializeReactGA = () => {
 }
 
 const App = () => {
+  const [slideOpen, setSlideOpen] = useState(false)
+  const duration = 7
+  const tl = new TimelineMax()
+  const Progress = () => {
+    tl.fromTo('.progress', duration, { height: 0 }, { height: '100%' })
+  }
+  useEffect(() => {
+    Progress()
+  }, [])
   useEffect(() => {
     const MySwiper = new Swiper('.blog-slider', {
       spaceBetween: 30,
@@ -34,6 +44,7 @@ const App = () => {
       autoplay: {
         delay: 7000
       },
+      watchSlidesProgress: true,
       mousewheel: {
         sensitivity: 3
       },
@@ -41,7 +52,6 @@ const App = () => {
         enabled: true,
         onlyInViewport: false
       },
-      // autoHeight: true,
       pagination: {
         el: '.blog-slider__pagination',
         type: 'bullets',
@@ -53,6 +63,11 @@ const App = () => {
       },
       direction: 'vertical'
     })
+
+    MySwiper.on('slideChange', () => $('.progress').css('height', 0))
+    // MySwiper.on('autoplayStop', () => MySwiper.autoplay.start())
+    MySwiper.on('autoplay', () => Progress())
+
     $('.toggle-menu').click(function() {
       $(this).toggleClass('active')
       $('.menu').fadeToggle(600)
@@ -104,10 +119,11 @@ const App = () => {
         0
       )
     }
-    /* VIEW CASE BUTTON */
+    /* change to vainila javascript onClick function below */
     $('.blog-slider__button').on('click', function(e) {
       e.preventDefault()
       contentOpen()
+      MySwiper.autoplay.stop()
     })
 
     $('.swiper-slide')
@@ -153,10 +169,12 @@ const App = () => {
       MySwiper.mousewheel.enable()
       MySwiper.keyboard.enable()
     }
-    /* CLOSE BUTTON */
+    /* same as open button change to onClick function */
     $('.closeBtn').on('click', function(e) {
       e.preventDefault()
       contentClose(400)
+      MySwiper.autoplay.start()
+      Progress()
     })
 
     $('.menu a').click(function(e) {
@@ -184,38 +202,6 @@ const App = () => {
     //     "linear"
     //   );
     // });
-
-    const wrap = $('.blog-slider__img')
-    wrap.on('mousewheel', function() {
-      // customScroll();
-    })
-    const customScroll = event => {
-      let delta = 0
-      if (!event) {
-        event = window.event
-      }
-      if (event.wheelDelta) {
-        delta = event.wheelDelta / 120
-      } else if (event.detail) {
-        delta = -event.detail / 3
-      }
-      if (delta) {
-        const scrollTop = $('.scroll').scrollTop()
-        const finScroll = scrollTop - parseInt(delta * 100) * 3
-        TweenMax.to($('.scroll'), 1, {
-          scrollTo: { y: finScroll },
-          ease: Power1.easeOut,
-          overwrite: 5
-        })
-      }
-      if (event.preventDefault) {
-        event.preventDefault()
-      }
-      event.returnValue = false
-    }
-    if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', customScroll, false)
-    }
 
     //menu onclick
     $('.link').on('click', function(e) {
@@ -283,8 +269,10 @@ const App = () => {
       menuActive()
     })
     initializeReactGA()
-  })
-
+  }, [])
+  const onClick = () => {
+    setSlideOpen(true)
+  }
   const slidehandler = i => {
     this.swiper.slideTo(i)
   }
@@ -309,6 +297,7 @@ const App = () => {
   return (
     <div className="App">
       <Loading />
+      {slideOpen ? null : <ProgressBar />}
       <div className="wrapper">
         <Topbar />
         <Menu projects={projects} />

@@ -1,0 +1,17 @@
+@import '../variables';
+
+.progressBar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  height: 100%;
+  width: 6px;
+  z-index: 10;
+  transform: translate(0, -50%);
+  background: $grey-blue;
+  span {
+    display: block;
+    width: 100%;
+    background-color: $secondary-color;
+  }
+}

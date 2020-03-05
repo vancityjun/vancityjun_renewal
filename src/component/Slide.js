@@ -16,12 +16,12 @@ const Slide = ({
   category,
   background
 }) => {
+  console.log(pc)
   const backgroundStyle = {
     background: 'url(' + require('../img/' + background) + ')',
     backgroundSize: 'cover',
     backgroundPosition: '50%'
   }
-
   const ScrollDown = () => {
     if (pc.length || mobile.length || customContent) {
       return (
