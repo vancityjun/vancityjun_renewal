@@ -30,6 +30,10 @@ const App = () => {
       loop: true,
       preventClicks: false,
       preventClicksPropagation: false,
+      shortSwipes: false,
+      autoplay: {
+        delay: 7000
+      },
       mousewheel: {
         sensitivity: 3
       },
@@ -198,7 +202,6 @@ const App = () => {
       if (delta) {
         const scrollTop = $('.scroll').scrollTop()
         const finScroll = scrollTop - parseInt(delta * 100) * 3
-        console.log(finScroll)
         TweenMax.to($('.scroll'), 1, {
           scrollTo: { y: finScroll },
           ease: Power1.easeOut,
@@ -274,39 +277,6 @@ const App = () => {
 
     MySwiper.on('slideChange', function() {
       menuActive()
-    })
-
-    $('.btnDesktop').on('click', function(e) {
-      e.preventDefault()
-      $(this).addClass('active')
-      $(this)
-        .siblings()
-        .removeClass('active')
-
-      $(this)
-        .closest('.project-content')
-        .find('.desktop')
-        .fadeIn(400)
-      $(this)
-        .closest('.project-content')
-        .find('.mobile')
-        .fadeOut(400)
-    })
-    $('.btnMobile').on('click', function(e) {
-      e.preventDefault()
-      $(this).addClass('active')
-      $(this)
-        .siblings()
-        .removeClass('active')
-
-      $(this)
-        .closest('.project-content')
-        .find('.mobile')
-        .fadeIn(400)
-      $(this)
-        .closest('.project-content')
-        .find('.desktop')
-        .fadeOut(400)
     })
 
     $(document).ready(function() {
